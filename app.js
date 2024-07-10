@@ -1,29 +1,8 @@
-// Initialize Telegram Web App
-const tg = window.Telegram.WebApp;
-
-tg.ready();
-
-// Access and display user info
-function displayUserInfo() {
-    const user = tg.initDataUnsafe.user;
-    const userInfoDiv = document.createElement('div');
-    userInfoDiv.id = 'user-info';
-    userInfoDiv.innerHTML = `
-        <h3>User Info</h3>
-        <p>ID: ${user.id}</p>
-        <p>First Name: ${user.first_name}</p>
-        <p>Last Name: ${user.last_name}</p>
-        <p>Username: ${user.username}</p>
-    `;
-    document.getElementById('content').appendChild(userInfoDiv);
-}
-
-
-// Event listeners for tabs
-document.getElementById('mainTab').addEventListener('click', () => {
-    loadMainContent();
-});
-
-document.getElementById('profileTab').addEventListener('click', () => {
-    loadProfileContent();
-});
+document.getElementById('contactForm').new+function(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        console.log(`name: ${name}, Email: ${email}, Message: ${message}`);
+        alert('Form submitted successfully!');
+};
