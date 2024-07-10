@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Main Tab</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="navbar">
+<a href="main.html">Main<></a>
+<a href="profile.html">Profile</a>
+</div>
+<main class="main-tab">
+<h2>Commodity Ads</h2>
+<div id="ads">
+<!-- Ads will be shown here -->
+</div>
+<h2>Create New Ad</h2>
+<form id="createAdForm">
+<label for="role">Role:</label>
+<select id="role" name="role">
+<option value="seller">Seller</option>
+<option value="buyer">Buyer</option>
+</select>
+<label for="type">Commodity Type:</label>
+<select id="type" name="type">
+<option value="food">Food</option>
+<option value="textiles">Textiles</option>
+</select>
+<label for="quantity">Quantity:</label>
+<input type="text" id="quantity" name="quantity" required>
+<label for="price">Price:</label>
+<input type="text" id="price" name="price" required>
+<label for="location">Location:</label>
+<input type="text" id="location" name="location" required>
+<button type="submit">Submit</button>
+</form>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
