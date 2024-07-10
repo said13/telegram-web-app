@@ -1,22 +1,28 @@
-body {
-    font-family: Arial, sans-serif;
+/* Add styles for the contact page */
+form {
+    max-width: 600px;
+    margin: auto;
+    padding: 1em;
+    background: #f9f9f9;
+    border-radius: 5px;
 }
-nav {
-    display: flex;
-    justify-content: space-around;
-    background-color: #333;
-    padding: 10px;
+
+label {
+    margin-top: 1em;
+    display: block;
 }
-nav button {
-    color: white;
-    background-color: #333;
+
+input, textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.5em;
+}
+
+button {
+    padding: 0.7em;
+    color: #fff;
+    background-color: #007BFF;
     border: none;
-    padding: 10px;
+    border-radius: 5px;
     cursor: pointer;
-}
-nav button hover {
-    background-color: #555;
-}
-#content {
-    padding: 20px;
 }
