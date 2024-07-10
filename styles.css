@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px;
+}
+nav button {
+    color: white;
+    background-color: #333;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+nav button hover {
+    background-color: #555;
+}
+#content {
+    padding: 20px;
+}
