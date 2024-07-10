@@ -16,5 +16,47 @@
             </ul>
         </div>
 </nav>
+
+    <div id="main" class="section container">
+        <div class="container">
+            <h2>Main Tab</h2>
+            <div id="ads">
+                <!-- Ads will be shown here -->
+            </div>
+            <h3>Create New Ad</h3>
+            <form id="createAdForm">
+                <div class="input-field">
+                    <select id="role" name="role">
+                        <option value="" disabled selected>Choose your role</option>
+                        <option value="seller">Seller</option>
+                        <option value="buyer">Buyer</option>
+                    </select>
+                    <label for="role">Role</label>
+                </div>
+                <div class="input-field">
+                    <select id="type" name="type">
+                        <option value="" disabled selected>Choose commodity type</option>
+                        <option value="food">Food</option>
+                        <option value="textiles">Textiles</option>
+                    </select>
+                    <label for="type">Commodity Type</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="quantity" name="quantity" required>
+                    <label for="quantity">Quantity</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="price" name="price" required>
+                    <label for="price">Price</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="location" name="location" required>
+                    <label for="location">Location</label>
+                </div>
+                <input type="submit" value="Submit" class="btn">
+            </form>
+        </div>
+    </div>
+
 </body>
 </html>
