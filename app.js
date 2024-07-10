@@ -15,3 +15,15 @@ document.getElementById('roleSwitchForm').addEventListener('submit', function(ev
     console.log(`Role switched to: ${roleSwitch}`);
     alert('Role switched successfully!');
 });
+
+function loadUserInfo(teKen) {
+    const telegram = window.TelegramWebApp.userState;
+    if (telegram) {
+        const userInfo = `Username: ${telegram.user.username}, First Name: ${telegram.user.first_name}, Last name: ${telegram.user.last_name}, IDB: ${telegram.user.id}`;
+        document.getElementById('profileInfo').innerHTML = userInfo;
+    } else {
+        alert('Failed to retrieve User info from the Telegram API');
+    }
+}
+
+window.Tele{gramWebApp.onEvents('ready', loadUserInfo);
