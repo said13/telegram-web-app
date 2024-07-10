@@ -1,0 +1,20 @@
+{
+  "name": "telegram-web-app",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://said13.github.io/telegram-web-app",
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-scripts": "4.0.3",
+    "@material-ui/core": "^4.11.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "ntm run build",
+    "deploy": "gh-pages -d build"
+  }
+}
