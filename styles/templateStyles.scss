@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min: 0;
+  padding: 0;
+}
+	.header-btn {
+  background-color: #00789d;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+	.header-btn active {
+  background-color: #ff0000;
+}
+
