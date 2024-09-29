@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Пекарня</title>
+    <!-- Подключение шрифта PT Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+</head>
+
+<body>
+    <!-- Экран выбора пекарни -->
+    <div id="bakery-selection" class="screen">
+        <h1>Выберите пекарню</h1>
+        <!-- Контейнер для карты -->
+        <div id="map" style="width: 100%; height: 400px;"></div>
+        <!-- Список пекарен (можно скрыть, если не требуется) -->
+        <ul id="bakery-list" class="nhidden"></ul>
+    </div>
+
+    <!-- Экран меню продуктов -->
+    <div id="product-menu" class="screen hidden">
+        <h1>Меню</h1>
+        <div id="product-categories"></div>
+        <button id="view-cart">Корзина</button>
+    </div>
+
+    <!-- Экран корзины -->
+    <div id="cart-screen" class="screen hidden">
+        <h1>Корзина</h1>
+        <ul id="cart-items"></ul>
+        <p id="total-price"></p>
+        <button id="checkout">Оформить заказ</button>
+    </div>
+
+    <!-- Экран оформления заказа -->
+    <div id="checkout-screen" class="screen hidden">
+        <h1>Оформление заказа</h1>
+        <form id="order-form">
+            <input type="text" id="name" placeholder="Ваше имя" required />
+            <input type="tel" id="phone" placeholder="Телефон" required />
+            <!-- Выбор способа оплаты -->
+            <label>Выберите способ оплаты:</label>
+            <div id="payment-methods">
+                <input type="radio" id="pay-ya" name="payment" value="ya" required>
+                <label for="pay-ya">Я Pay</label>
+                <input type="radio" id="pay-t" name="payment" value="t">
+                <label for="pay-t">T Pay</label>
+            </div>
+            <button type="submit">Подтвердить заказ</button>
+        </form>
+    </div>
+
+    <!-- Экран подтверждения заказа с QR-кодом -->
+    <div id="order-confirmation-screen" class="screen hidden">
+        <h1>Заказ принят!</h1>
+        <p>Спасибо за ваш заказ. Используйте QR-код ниже для получения заказа.</p>
+        <div id="qr-code"></div>
+        <button id="back-to-menu">Вернуться в меню</button>
+    </div>
+
+    <!-- Навигационные кнопки -->
+    <div id="navigation-buttons">
+        <button id="back-button" disabled>Назад</button>
+        <button id="next-button" disabled>Вперед</button>
+    </div>
+
+    <!-- Подключение библиотек и скриптов -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

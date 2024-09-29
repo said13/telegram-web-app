@@ -1,0 +1,325 @@
+/* Базовые стили */
+body {
+    font-family: 'PT Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Заголовки */
+h1,
+h2 {
+    color: #2c3e50;
+}
+
+/* Контейнер экрана */
+.screen {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Скрытый экран */
+.hidden {
+    display: none;
+}
+
+/* Стили списка пекарен */
+#bakery-list {
+    list-style: none;
+    padding: 0;
+}
+
+#bakery-list li {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#bakery-list li:hover {
+    background-color: #ecf0f1;
+}
+
+/* Меню продуктов */
+#product-categories {
+    display: flex;
+    flex-direction: column;
+}
+
+#product-categories h2 {
+    border-bottom: 2px solid #bdc3c7;
+    padding-bottom: 5px;
+}
+
+.product-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.product-item button {
+    padding: 5px 10px;
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.product-item button:hover {
+    background-color: #2ecc71;
+}
+
+/* Кнопка просмотра корзины */
+#view-cart {
+    padding: 10px 15px;
+    background-color: #2980b9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#view-cart:hover {
+    background-color: #3498db;
+}
+
+/* Корзина */
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#cart-items button {
+    padding: 5px 10px;
+    background-color: #c0392b;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#cart-items button:hover {
+    background-color: #e74c3c;
+}
+
+/* Итого */
+#total-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* Кнопка оформления заказа */
+#checkout {
+    padding: 10px 15px;
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#checkout:hover {
+    background-color: #2ecc71;
+}
+
+/* Форма оформления заказа */
+#order-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#order-form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+}
+
+#order-form button {
+    padding: 10px 15px;
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#order-form button:hover {
+    background-color: #2ecc71;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    .screen {
+        padding: 15px;
+    }
+
+    .product-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .product-item button {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    #cart-items li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #cart-items button {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+/* Стили для выбора способа оплаты */
+#payment-methods {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#payment-methods input {
+    margin-right: 5px;
+}
+
+#payment-methods label {
+    margin-right: 15px;
+}
+
+/* Экран подтверждения заказа */
+#order-confirmation-screen {
+    text-align: center;
+}
+
+#qr-code {
+    margin: 20px 0;
+}
+
+#back-to-menu {
+    padding: 10px 15px;
+    background-color: #2980b9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#back-to-menu:hover {
+    background-color: #3498db;
+}
+
+/* Контейнер карты */
+#map {
+    margin-bottom: 20px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+}
+
+/* Навигационные кнопки */
+#navigation-buttons {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #bdc3c7;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    z-index: 1000;
+}
+
+#navigation-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    flex: 1;
+    margin: 0 5px;
+}
+
+#navigation-buttons button:disabled {
+    background-color: #ecf0f1;
+    color: #7f8c8d;
+    cursor: not-allowed;
+}
+
+/* Стили для категорий продуктов */
+.category {
+    margin-bottom: 20px;
+}
+
+/* Сетка продуктов */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/* Карточка продукта */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+.product-card h3 {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 0.9em;
+    color: #7f8c8d;
+}
+
+.product-card .price {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Контейнер для кнопок количества */
+.quantity-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quantity-controls button {
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.quantity-controls span {
+    margin: 0 10px;
+    font-size: 16px;
+}
